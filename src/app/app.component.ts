@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from './list-of-status/Post.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  posts: Post[];
+
+  constructor() {
+    this.posts = [
+      new Post('Status at line 1', 3, 1),
+      new Post('Status at line 2', 1, 0),
+    ];
+  }
+
+  addPost(status: HTMLInputElement): boolean {
+    console.log(`Your status : ${status.value}`);
+    this.posts.push(new Post(status.value, 0, 0));
+    status.value = '';
+    return false;
+  }
 }

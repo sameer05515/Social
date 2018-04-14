@@ -1,0 +1,16 @@
+<div class="col-md-2" style="text-align: right;">
+  <img src="../../assets/Images/Avatar.png" style="height: 60px; width: 60px">
+</div>
+<div class="col-md-6">{{post.status}}</div>
+<div class="col-md-1" style="text-align: right;">{{post.likes}}</div>
+<div class="col-md-1">
+  <a class="text-success" href (click)="like()">
+    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+  </a>
+</div>
+<div class="col-md-1" style="text-align: right;">{{post.dislikes}}</div>
+<div class="col-md-1">
+  <a class="text-danger" href (click)="dislike()">
+    <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+  </a>
+</div>
