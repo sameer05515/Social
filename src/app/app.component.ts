@@ -11,8 +11,8 @@ export class AppComponent {
 
   constructor() {
     this.posts = [
-      new Post('Status at line 1', 3, 1),
-      new Post('Status at line 2', 1, 0),
+      new Post('Angular is awesome', 3, 1),
+      new Post('Everyone should learn Angular', 1, 0),
     ];
   }
 
